@@ -44,7 +44,7 @@ const ContributionForm = () => {
         amount: amount,
         tip: tip,
       });
-      console.log(res);
+     
       const options = {
         order_id: res.data.order.id, //5
         amount: res.data.order.amount, //2
@@ -61,7 +61,7 @@ const ContributionForm = () => {
       const rzp = new window.Razorpay(options);
       rzp.open();
     } catch (error) {
-      console.log("error at frontend", error);
+      console.log("Something went wrong", error);
     }
   };
 
