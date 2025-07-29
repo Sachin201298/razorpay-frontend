@@ -51,7 +51,7 @@ const ContributionForm = () => {
         currency: res.data.order.currency, //3
         key: res.data.razpekey, //1
         name: res.data.name, //4
-        callback_url: callback_url: `${window.location.origin}/thankyouPage`,
+        callback_url: `${window.location.origin}/thankyouPage`,
         prefill: {
           name: form.anonymous ? "Anonymous" : form.name,
           email: form.anonymous ? "anonymous@example.com" : form.email,
@@ -68,15 +68,15 @@ const ContributionForm = () => {
   return (
     <>
       <div className="max-w-6xl mx-auto mt-10 flex justify-center flex-col items-center">
-        <h1 className="text-cyan-500 text-4xl font-bold">
+        <h1 className="text-cyan-500 text-4xl font-bold mx-5">
           Choose a Contribution amount
         </h1>
-        <p className="mt-10">
+        <p className="mt-10 mx-5">
           Most Contntributors contribute approx{" "}
           <span className="text-cyan-600">&#x20B9;2500 </span>to this
           Fundraisers
         </p>
-        <div className="flex-col  md:flex-row gap-3 mt-3">
+        <div className="flex-col  md:flex-row gap-3 mt-3 mx-5">
           <button
             onClick={() => {
               setAmount(1000), setAddAmount(false);
@@ -137,7 +137,7 @@ const ContributionForm = () => {
             </div>
           )}
         </div>
-        <div className="max-w-xl text-md bg-cyan-100 mt-5 p-6 rounded-md">
+        <div className="max-w-xl text-md bg-cyan-100 mt-5 m-5 p-6 rounded-md">
           <p>
             Ketto is charging 0% platfarm fee* for this Fundraiser, releying
             solely on the generosity of contributors like you{" "}
@@ -169,10 +169,10 @@ const ContributionForm = () => {
         </div>
         <form
           onSubmit={submitHandler}
-          className="flex flex-col  md:w-lg gap-2 mt-3"
+          className="flex flex-col  md:w-lg gap-2 mt-3 mx-5"
         >
           <div className="flex flex-col">
-            <label htmlFor="name" className="text-md font-medium">
+            <label htmlFor="name" className="text-md font-medium ">
               Name*
             </label>
             <input
