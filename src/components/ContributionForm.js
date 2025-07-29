@@ -51,7 +51,7 @@ const ContributionForm = () => {
         currency: res.data.order.currency, //3
         key: res.data.razpekey, //1
         name: res.data.name, //4
-        callback_url: "http://localhost:3000/thankyouPage",
+        callback_url: callback_url: `${window.location.origin}/thankyouPage`,
         prefill: {
           name: form.anonymous ? "Anonymous" : form.name,
           email: form.anonymous ? "anonymous@example.com" : form.email,
