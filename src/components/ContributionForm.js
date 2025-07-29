@@ -51,7 +51,9 @@ const ContributionForm = () => {
         currency: res.data.order.currency, //3
         key: res.data.razpekey, //1
         name: res.data.name, //4
-        callback_url: "https://razorpay-frontend-fdo4.vercel.app/thankyouPage",
+        handler: function () {
+          window.location.href = "/thankyouPage";
+        },
         prefill: {
           name: form.anonymous ? "Anonymous" : form.name,
           email: form.anonymous ? "anonymous@example.com" : form.email,
